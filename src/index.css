@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(32,35,42);
+  background-color: rgb(49,52,55);
 }
 
 div {
-  color: white;
+  color: rgb(207,206,195);
 }
