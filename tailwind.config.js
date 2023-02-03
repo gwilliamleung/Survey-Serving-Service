@@ -10,7 +10,18 @@ module.exports = {
       'white': '#dfe2d7',
       'black': '#000000',
     },
-    extend: {},
+    extend: {
+      animation: {
+        fade: 'fadeOut 5s ease-in-out',
+      },
+      
+      keyframes: theme => ({
+        fadeOut: {
+          '0%': { backgroundColor: theme('colors.red.300') },
+          '100%': { backgroundColor: theme('colors.transparent') },
+        },
+      }),
+    },
   },
   plugins: [],
 }

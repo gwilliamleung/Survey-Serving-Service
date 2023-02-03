@@ -10,10 +10,14 @@ function App() {
     setShowProfile(showProfile => !showProfile)
   }
 
+  function homeButtonClickHandler () {
+    setShowProfile(showProfile => showProfile = false)
+  }
+
   if(showProfile){
     return(
       <div className="w-screen h-screen">
-      <NavBar showLogin={showProfile} profileClickHandler={profileClickHandler}/>
+      <NavBar showLogin={showProfile} profileClickHandler={profileClickHandler} homeButtonClickHandler={homeButtonClickHandler}/>
       <div className="flex justify-center">
         <Auth/>
       </div>
@@ -23,7 +27,7 @@ function App() {
   else{
     return (
       <div className="w-screen h-screen">
-        <NavBar shoeLogin={showProfile} profileClickHandler={profileClickHandler}/>
+        <NavBar shoeLogin={showProfile} profileClickHandler={profileClickHandler} homeButtonClickHandler={homeButtonClickHandler}/>
         <div className="flex justify-center">
         </div>
       </div>
